@@ -43,7 +43,7 @@ public class EnemeyController : MonoBehaviour {
             if (hideablePlayer == null || !hideablePlayer.IsHidden) { // ||  
                 Debug.Log("player is not hidden");
                 // Check if player is on the same platform level
-               // if (Mathf.Approximately(transform.position.y, hit.collider.transform.position.y)) {
+                if (Mathf.Abs(transform.position.y - hit.collider.transform.position.y) < 0.1f) {
                // Check if enemy is facing player
                     if ((_movingToEndPoint && transform.position.x < hit.collider.transform.position.x) ||
                         (!_movingToEndPoint && transform.position.x > hit.collider.transform.position.x)) {
@@ -51,7 +51,7 @@ public class EnemeyController : MonoBehaviour {
                         Debug.Log("kill");
                         Destroy(hit.collider.gameObject);
                     }
-                //} else {Debug.Log("platform check");}
+                } else {Debug.Log("platform check");}
             }
             else {
                 Debug.Log("player is hidden");
