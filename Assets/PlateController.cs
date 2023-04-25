@@ -85,7 +85,7 @@ public class PlateController : MonoBehaviour
         {
             moveBack = true;
             isTriggered = false;
-            collision.transform.parent = null;
+            //collision.transform.parent = null;
         }
 
         if (!isTriggered)
