@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1452318604804712504}
   - component: {fileID: 770962391958756716}
   - component: {fileID: 6488966020932862438}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dr. Diaz
   m_TagString: Untagged
   m_Icon: {fileID: 0}

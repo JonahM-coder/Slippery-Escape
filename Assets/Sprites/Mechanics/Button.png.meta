@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3c4a6277b27176b499406a6578a922ba
+guid: 280bf3a66dd93fe4a90afddbd4780b30
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,10 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slippery Escape Triggers (32 x 32)_0
+      name: Button_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787d5a47c3ffaf74b9d228f1ade48d92
+      internalID: -58413446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 258
-        height: 434
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,50 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b079d1888960d9a4c83d31d484d3d0cf
-      internalID: -1706919757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slippery Escape Triggers (32 x 32)_1
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 170
-        width: 124
-        height: 340
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b35a74501b5698d42a480c1ec21d6ec5
-      internalID: -1178936856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slippery Escape Triggers (32 x 32)_2
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 170
-        width: 124
-        height: 328
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8920576b688c58449df0b70e2ac1dcc
-      internalID: 320188482
+      spriteID: a618c7118b0ee20499de6be8d6e33e4e
+      internalID: -302854174
       vertices: []
       indices: 
       edges: []
@@ -178,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slippery Escape Triggers (32 x 32)_0: -1706919757
-      Slippery Escape Triggers (32 x 32)_2: 320188482
-      Slippery Escape Triggers (32 x 32)_1: -1178936856
+      Button_1: -302854174
+      Button_0: -58413446
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
