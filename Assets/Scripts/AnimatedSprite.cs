@@ -13,15 +13,26 @@ public class AnimatedSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // if(transform.position.x >= 0) {
+        //     sprites = rightSprites;
+
+        // }
+        // else if(transform.position.x < 0) {
+        //     sprites = leftSprites;
+        // }
+        //
     }
 
     public Sprite[] sprites;
+    public Sprite[] leftSprites;
+    public Sprite[] rightSprites;
     public float framerate = 1f / 6f;
     private SpriteRenderer spriteRenderer;
+    private Transform test;
     private int frame;
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     private void OnEnable() {
