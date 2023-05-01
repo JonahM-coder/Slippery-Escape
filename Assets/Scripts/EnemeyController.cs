@@ -3,21 +3,31 @@
 public class EnemeyController : MonoBehaviour {
     public Transform startPoint;
     public Transform endPoint;
+    public Transform temp;
+    public SpriteRenderer testSR;
     public float speed;
     public bool startMoving = true;
+    public bool facingStartingDirection = true;
     public float delay = 0;
-    public float raycastDistance = 1f;
+    // changed to 5f for testing change if needed
+    public float raycastDistance = 5f;
 
     private bool _movingToEndPoint = true;
     private float _currentDelay = 0;
 
+    private void Awake() {
+        testSR = GetComponent<SpriteRenderer>();
+    }
+
     void Update() {
         if (startMoving) {
             if (_currentDelay <= 0) {
-                Vector2 direction = _movingToEndPoint
+                // Switched to facingStartingDirection to copy the direction the sprite ends up facing
+                Vector2 direction = facingStartingDirection
                     ? endPoint.position - transform.position
                     : startPoint.position - transform.position;
                 direction.Normalize();
+                
 
                 CheckPlayerDetection(direction);
 
@@ -30,6 +40,7 @@ public class EnemeyController : MonoBehaviour {
         else {
             _currentDelay = delay;
         }
+        
     }
 
     private void CheckPlayerDetection(Vector2 direction) {
@@ -61,12 +72,25 @@ public class EnemeyController : MonoBehaviour {
 
     private void Move(Vector2 direction) {
         transform.Translate(direction * speed * Time.deltaTime);
+       
 
-        if (Vector2.Distance(transform.position, endPoint.position) < 0.3f) {
-            _movingToEndPoint = false;
+        if (Vector2.Distance(transform.position, endPoint.position) < 0.5f) {
+            temp = startPoint;
+            startPoint = endPoint;
+            endPoint = temp;
+            // line 82 is what flips the sprites left to right and vice versa
+            testSR.flipX = !testSR.flipX;
+            // This is to integrate with line 59 so it's false when
+            _movingToEndPoint = !_movingToEndPoint;
         }
-        else if (Vector2.Distance(transform.position, startPoint.position) < 0.3f) {
-            _movingToEndPoint = true;
-        }
+        // Section is not necessary since sprite moves from A to B and vice versa with the destination being what endPoint.Position ends up being in line 77
+        // else if (Vector2.Distance(transform.position, startPoint.position) < 0.5f) {
+
+        //     temp = endPoint;
+        //     endPoint = startPoint;
+        //     startPoint = temp;
+        //     Debug.Log('b');
+        //     // testSR.flipX = false;
+        // }
     }
 }
