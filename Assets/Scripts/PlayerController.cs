@@ -12,10 +12,13 @@ public class PlayerController : MonoBehaviour {
     public bool hiding {get; private set;}
     
     private Rigidbody2D _rb;
+    float scaleX;
+    private float moveHorizontal;
 
     void Start() {
         _rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
+        scaleX = transform.localScale.x;
     }
 
     
@@ -50,7 +53,8 @@ public class PlayerController : MonoBehaviour {
 
         if (hideablePlayer.IsHidden) return;
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        moveHorizontal = Input.GetAxis("Horizontal");
+        Flip();
         Vector2 movement = new Vector2(moveHorizontal * moveSpeed, _rb.velocity.y);
         _rb.velocity = movement;
 
@@ -74,6 +78,15 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.name.Equals("Hiding Vat"))
         {
             canHide = false;
+        }
+    }
+
+    public void Flip() {
+        if (moveHorizontal > 0) {
+            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
+        }
+        if (moveHorizontal < 0) {
+            transform.localScale = new Vector3((-1) * scaleX, transform.localScale.y, transform.localScale.z);
         }
     }
 
