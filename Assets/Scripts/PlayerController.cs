@@ -5,14 +5,17 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed = 2f;
     public float jumpForce = 3f;
     
-    private Collider2D[] results;
+    
     private Vector2 direction;
-
-    private bool climbing;
+    private SpriteRenderer rend;
+    private bool canHide = false;
+    private bool hiding = false;
+    
     private Rigidbody2D _rb;
 
     void Start() {
         _rb = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
     
@@ -20,11 +23,22 @@ public class PlayerController : MonoBehaviour {
     void Update() {
        // CheckCollision();
 
-        if (climbing)
-    {
-        direction.y = Input.GetAxis("Vertical") * moveSpeed;
-    }
-       
+       if (canHide && Input.GetKey("up"))
+       {
+        Physics2D.IgnoreLayerCollision(3, 6, true);
+        rend.sortingOrder = 0;
+        hiding = true;
+        gameObject.GetComponent<Renderer>().enabled = false;
+       }
+       else
+       {
+        Physics2D.IgnoreLayerCollision(3, 6, false);
+        rend.sortingOrder = 2;
+        hiding = false;
+        gameObject.GetComponent<Renderer>().enabled = true;
+       } 
+
+
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (hideablePlayer.IsHidden) {
                 hideablePlayer.Unhide();
@@ -44,4 +58,21 @@ public class PlayerController : MonoBehaviour {
             _rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name.Equals("Hiding Vat"))
+        {
+            canHide = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.name.Equals("Hiding Vat"))
+        {
+            canHide = false;
+        }
+    }
+
 }
