@@ -17,7 +17,8 @@ public class HideablePlayer : MonoBehaviour {
     public void Hide() {
         IsHidden = true;
         _spriteRenderer.enabled = false;
-        _playerCollider.enabled = false;
+        //_playerCollider.enabled = false;
+        Physics2D.IgnoreLayerCollision(3, 6, true);
         _rb.gravityScale = 0;
         _rb.velocity = Vector2.zero;
     }
@@ -25,7 +26,8 @@ public class HideablePlayer : MonoBehaviour {
     public void Unhide() {
         IsHidden = false;
         _spriteRenderer.enabled = true;
-        _playerCollider.enabled = true;
+        Physics2D.IgnoreLayerCollision(3, 6, false);
+        //_playerCollider.enabled = true;
         _rb.gravityScale = 1;
     }
 }
