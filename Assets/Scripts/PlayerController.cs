@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.name.Equals("Hiding Vat"))
         {
             canHide = true;
+        } else if (other.gameObject.name.Equals("Escape Vent")) {
+            GameManager.Instance.NextLevel();
         }
     }
 
