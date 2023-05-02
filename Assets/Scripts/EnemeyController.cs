@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemeyController : MonoBehaviour {
     public Transform startPoint;
@@ -30,6 +31,7 @@ public class EnemeyController : MonoBehaviour {
                 
 
                 CheckPlayerDetection(direction);
+                
 
                 Move(direction);
             }
@@ -69,6 +71,15 @@ public class EnemeyController : MonoBehaviour {
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("FailScreen");
+        }
+        
+    }
+    
 
     private void Move(Vector2 direction) {
         transform.Translate(direction * speed * Time.deltaTime);
