@@ -5,12 +5,13 @@ using UnityEngine;
 public class footsteps : MonoBehaviour
 {
     public AudioSource footstepSounds;
-    public HideablePlayer hideablePlayer;
+    // public HideablePlayer hideablePlayer;
+    public PlayerController player;
 
     // Update is called once per frame
     void Update()
     {
-        if (hideablePlayer.IsHidden) {
+        if (player.hiding) {
             footstepSounds.enabled = false;
             return;
         }

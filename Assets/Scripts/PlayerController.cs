@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
     private Vector2 direction;
     private SpriteRenderer rend;
     private bool canHide = false;
-    private bool hiding = false;
+    public bool hiding {get; private set;}
     
     private Rigidbody2D _rb;
 
