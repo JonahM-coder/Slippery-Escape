@@ -9094,6 +9094,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -356470916, guid: 6d3bd63dd4c5a6245afcdc2ace2c5a0d, type: 3}
     - target: {fileID: 8925070158628317598, guid: 61cc23f02ffc2224b98d9a2a0e33cb4e, type: 3}
+      propertyPath: emptyTube
+      value: 
+      objectReference: {fileID: 97595261}
+    - target: {fileID: 8925070158628317598, guid: 61cc23f02ffc2224b98d9a2a0e33cb4e, type: 3}
       propertyPath: filledTube
       value: 
       objectReference: {fileID: 811740115}
