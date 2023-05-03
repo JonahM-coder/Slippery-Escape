@@ -9,6 +9,10 @@ public class ButtonControllers : MonoBehaviour
     }
 
     public void StartGameButton() {
+        GameManager.Instance.TextScroll();
+    }
+
+    public void TextScrollButton() {
         GameManager.Instance.NewGame();
     }
 }
