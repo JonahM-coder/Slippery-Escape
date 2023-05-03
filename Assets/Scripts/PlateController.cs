@@ -18,7 +18,7 @@ public class PlateController : MonoBehaviour
     //Time Variables
     public bool startTimer = false;
     public float timer = 5f;
-    float timeLeft = 0f;
+    public float timeLeft = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,6 @@ public class PlateController : MonoBehaviour
         {
             if(transform.position.y < originalPos.y)
             {
-                transform.Translate(0, 0.01f, 0);
                 isTriggered = false;
             }
             else
@@ -54,13 +53,17 @@ public class PlateController : MonoBehaviour
                 isTriggered = false;
                 startTimer = false;
                 timeLeft = timer;
+
                 target.transform.Translate(0, -newPos, 0f);
+
             }
+
         }
 
 
     }
 
+    /*
     //Occurs only when player is staying in the triggering hitbox
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -69,7 +72,7 @@ public class PlateController : MonoBehaviour
         if(collision.transform.name == "Player")
         {
             isTriggered = true;
-            transform.Translate(0, pushSpeed, 0);
+            //transform.Translate(0, pushSpeed, 0);
             moveBack = false;
 
             if (transform.position.y <= pushLimit_Y)
@@ -82,6 +85,7 @@ public class PlateController : MonoBehaviour
         }
 
     }
+    */
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -89,18 +93,16 @@ public class PlateController : MonoBehaviour
         //Plate moves down if it recognizes Player game object
         if (collision.transform.name == "Player")
         {
+            target.transform.Translate(0, newPos, 0f);
             isTriggered = true;
             startTimer = true;
             collision.transform.parent = transform;
         }
 
-        if (isTriggered)
-        {
-            target.transform.Translate(0, newPos, 0f);
-        }
 
     }
 
+    /*
     private void OnCollisionExit2D(Collision2D collision)
     {
 
@@ -118,6 +120,6 @@ public class PlateController : MonoBehaviour
         }
 
     }
-
+    */
 
 }
