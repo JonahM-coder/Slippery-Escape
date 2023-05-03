@@ -6,7 +6,6 @@ public class HideablePlayer : MonoBehaviour {
     private SpriteRenderer _spriteRenderer;
     private Collider2D _playerCollider;
     private Rigidbody2D _rb;
-   =
 
     void Start() {
         IsHidden = false;
