@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void NewGame() {
+    public void NewGame() {
         LoadLevel(2);
     }
 
@@ -57,5 +57,9 @@ public class GameManager : MonoBehaviour
     public void ResetLevel()
     {
         LoadLevel(stage);
+    }
+
+    public void FailLevel() {
+        SceneManager.LoadScene("FailScreen");
     }
 }

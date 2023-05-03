@@ -62,7 +62,8 @@ public class EnemeyController : MonoBehaviour {
                         (!_movingToEndPoint && transform.position.x > hit.collider.transform.position.x)) {
                         // Kill player
                         Debug.Log("kill");
-                        Destroy(hit.collider.gameObject);
+                        // Destroy(hit.collider.gameObject);
+                        GameManager.Instance.FailLevel();
                     }
                 } else {Debug.Log("platform check");}
             }
@@ -75,7 +76,8 @@ public class EnemeyController : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("FailScreen");
+            // SceneManager.LoadScene("FailScreen");
+            GameManager.Instance.FailLevel();
         }
         
     }
