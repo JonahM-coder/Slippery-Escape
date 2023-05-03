@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (hideablePlayer.IsHidden) {
+            if (hideablePlayer.IsHidden && canHide) {
                 hideablePlayer.Unhide();
             }
-            else {
+            else if (!hideablePlayer.IsHidden && canHide) {
                 hideablePlayer.Hide();
             }
         }
@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.name.Equals("Hiding Vat"))
         {
+            
             canHide = false;
         }
     }
