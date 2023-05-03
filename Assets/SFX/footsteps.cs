@@ -16,7 +16,7 @@ public class footsteps : MonoBehaviour
             return;
         }
 
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow)) {
             footstepSounds.enabled = true;
         } else {
             footstepSounds.enabled = false;
