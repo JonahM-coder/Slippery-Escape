@@ -62,4 +62,8 @@ public class GameManager : MonoBehaviour
     public void FailLevel() {
         SceneManager.LoadScene("FailScreen");
     }
+
+    public void TextScroll() {
+        SceneManager.LoadScene("Opening Text");
+    }
 }
