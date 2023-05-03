@@ -66,4 +66,9 @@ public class GameManager : MonoBehaviour
     public void TextScroll() {
         SceneManager.LoadScene("Opening Text");
     }
+
+    public void CutScene() {
+        SceneManager.LoadScene("Cutscene");
+    }
+
 }

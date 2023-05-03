@@ -13,6 +13,6 @@ public class ButtonControllers : MonoBehaviour
     }
 
     public void TextScrollButton() {
-        GameManager.Instance.NewGame();
+        GameManager.Instance.CutScene();
     }
 }
