@@ -6,12 +6,14 @@ public class HideablePlayer : MonoBehaviour {
     private SpriteRenderer _spriteRenderer;
     private Collider2D _playerCollider;
     private Rigidbody2D _rb;
+   =
 
     void Start() {
         IsHidden = false;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _playerCollider = GetComponent<Collider2D>();
         _rb = GetComponent<Rigidbody2D>();
+        
     }
 
     public void Hide() {
@@ -21,6 +23,7 @@ public class HideablePlayer : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(3, 6, true);
         _rb.gravityScale = 0;
         _rb.velocity = Vector2.zero;
+        
     }
 
     public void Unhide() {
