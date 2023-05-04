@@ -16,7 +16,4 @@ public class ButtonControllers : MonoBehaviour
         GameManager.Instance.CutScene();
     }
 
-    public void CustsceneNewGame() {
-        GameManager.Instance.NewGame();
-    }
 }
