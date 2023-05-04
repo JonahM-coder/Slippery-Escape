@@ -51,24 +51,21 @@ public class EnemeyController : MonoBehaviour {
             LayerMask.GetMask("Player"));
         if (hit.collider != null) {
             // Check if player is hidden
-            Debug.Log("Collider detected: " + hit.collider.gameObject.name);
+            //Debug.Log("Collider detected: " + hit.collider.gameObject.name);
             HideablePlayer hideablePlayer = hit.collider.GetComponent<HideablePlayer>();
             if (hideablePlayer == null || !hideablePlayer.IsHidden) { // ||  
-                Debug.Log("player is not hidden");
+                //Debug.Log("player is not hidden");
                 // Check if player is on the same platform level
                 if (Mathf.Abs(transform.position.y - hit.collider.transform.position.y) < 1.0f) {
                // Check if enemy is facing player
                     if ((_movingToEndPoint && transform.position.x < hit.collider.transform.position.x) ||
                         (!_movingToEndPoint && transform.position.x > hit.collider.transform.position.x)) {
                         // Kill player
-                        Debug.Log("kill");
+                        //Debug.Log("kill");
                         // Destroy(hit.collider.gameObject);
                         GameManager.Instance.FailLevel();
                     }
-                } else {Debug.Log("platform check");}
-            }
-            else {
-                Debug.Log("player is hidden");
+                }
             }
         }
     }

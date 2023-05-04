@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LeverController : MonoBehaviour
@@ -25,12 +26,14 @@ public class LeverController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("WTF");
         if(startTimer)
         {
             timeLeft -= 1 * Time.deltaTime;
 
             if (timeLeft <= 0)
             {
+                print("time expired");
                 isTriggered = false;
                 target.transform.Translate(0, -newPos, 0f);
                 startTimer = false;

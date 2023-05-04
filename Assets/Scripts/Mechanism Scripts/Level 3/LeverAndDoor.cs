@@ -45,6 +45,7 @@ public class LeverAndDoor : MonoBehaviour
     // Check if the object that collided with the trigger has a "Player" tag
     if (other.CompareTag("Player"))
     {
+        print("okay we here");
         // Unrender the object to unrender
         LevDoorClosed.SetActive(false);
 
@@ -55,9 +56,10 @@ public class LeverAndDoor : MonoBehaviour
         LeverOn.SetActive(true);
 
     }
-    else {
-        Invoke("TimedRendering", timer);
-    }
+    // else {
+    //     print("else");
+    //     Invoke("TimedRendering", timer);
+    // }
 }
 
     void TimedRendering(){
