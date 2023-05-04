@@ -4585,6 +4585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dr. Diaz
       objectReference: {fileID: 0}
+    - target: {fileID: 6488966020932862438, guid: 87a0ed6c8d7a82844a4eea1ff93f0570, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a0ed6c8d7a82844a4eea1ff93f0570, type: 3}
 --- !u!4 &455802854 stripped
@@ -7514,10 +7518,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818567658}
     m_Modifications:
+    - target: {fileID: 8925070158628317586, guid: 61cc23f02ffc2224b98d9a2a0e33cb4e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8925070158628317596, guid: 61cc23f02ffc2224b98d9a2a0e33cb4e, type: 3}
       propertyPath: m_Name
       value: Hank
       objectReference: {fileID: 0}
+    - target: {fileID: 8925070158628317598, guid: 61cc23f02ffc2224b98d9a2a0e33cb4e, type: 3}
+      propertyPath: emptyTube
+      value: 
+      objectReference: {fileID: 8656925376395818370, guid: 745214115f6a0d34180a2b0e0c02a2f6, type: 3}
     - target: {fileID: 8925070158628317599, guid: 61cc23f02ffc2224b98d9a2a0e33cb4e, type: 3}
       propertyPath: m_RootOrder
       value: 4

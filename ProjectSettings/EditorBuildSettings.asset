@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 6.unity
     guid: cb18111415efd2447b9f26165da9eb83
   - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: ef153b44a51b3344cbe16fd52660433c
+  - enabled: 1
     path: Assets/Scenes/FailScreen.unity
     guid: f8342cf732f8f1d4c92109521a1909aa
   m_configObjects: {}
