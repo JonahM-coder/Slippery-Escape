@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void NewGame() {
-        LoadLevel(2);
+        LoadLevel(1);
     }
 
     public void LoadLevel(int stage) {
