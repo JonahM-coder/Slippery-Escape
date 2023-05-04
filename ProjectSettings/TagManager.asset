@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pipe
   - Ship
+  - Lever
   layers:
   - Default
   - TransparentFX
