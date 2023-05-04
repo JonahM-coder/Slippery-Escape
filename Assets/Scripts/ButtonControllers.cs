@@ -16,4 +16,8 @@ public class ButtonControllers : MonoBehaviour
         GameManager.Instance.CutScene();
     }
 
+    public void SkipCutSceneButton() {
+        GameManager.Instance.NextLevel();
+    }
+
 }
