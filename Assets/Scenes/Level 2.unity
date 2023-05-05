@@ -9453,7 +9453,7 @@ PrefabInstance:
       objectReference: {fileID: 1350257610}
     - target: {fileID: 4238658843482527746, guid: 0f33911e37040f5499323c84dba7bcbe, type: 3}
       propertyPath: raycastDistance
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4238658843482527746, guid: 0f33911e37040f5499323c84dba7bcbe, type: 3}
       propertyPath: facingStartingDirection
