@@ -11,7 +11,7 @@ public class Lv5LeverAndDoor : MonoBehaviour
     public GameObject LeverOff;
     public GameObject LeverOn;
 
-    private float timer = 20.0f; // seconds on timer
+    private float timer = 15.0f; // seconds on timer
 
     private Rigidbody2D rb;
 

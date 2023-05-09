@@ -10,7 +10,7 @@ public class Lv5ButtonAndDoor : MonoBehaviour
     public GameObject ButtonOff;
     public GameObject ButtonOn;
 
-    private float timer = 12.0f; // seconds on timer
+    private float timer = 14.0f; // seconds on timer
 
     // Start is called before the first frame update
     void Start()

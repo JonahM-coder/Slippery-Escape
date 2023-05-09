@@ -10,7 +10,7 @@ public class Lv5PressurePlateAndDoor : MonoBehaviour
     public GameObject PressurePlateOff;
     public GameObject PressurePlateOn;
 
-    private float timer = 17.0f; // seconds on timer
+    private float timer = 19.0f; // seconds on timer
 
     // Start is called before the first frame update
     void Start()

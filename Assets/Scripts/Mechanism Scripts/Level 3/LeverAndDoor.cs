@@ -8,11 +8,7 @@ using UnityEngine;
 public class LeverAndDoor : MonoBehaviour
 {
     private SpriteRenderer rend;
-    public Sprite ClosedLeverDoor; //temp
-    public Sprite OpenLeverDoor;
-    public GameObject LeverDoorClosed;
-    public GameObject LeverDoorOpen;
-
+   
     public GameObject LevDoorClosed;
     public GameObject LevDoorOpen;
 
@@ -28,9 +24,7 @@ public class LeverAndDoor : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
-        ClosedLeverDoor = GetComponent<Sprite>();
-        ClosedLeverDoor = LeverDoorClosed.gameObject.GetComponent<SpriteRenderer>().sprite;
-        OpenLeverDoor = LeverDoorOpen.GetComponent<SpriteRenderer>().sprite;
+    
     }
 
     // Update is called once per frame
@@ -55,6 +49,7 @@ public class LeverAndDoor : MonoBehaviour
         LeverOff.SetActive(false);
         LeverOn.SetActive(true);
 
+        Invoke("TimedRendering", timer);
     }
     // else {
     //     print("else");
