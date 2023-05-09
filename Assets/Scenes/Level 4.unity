@@ -435,10 +435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1b376be0f15aa4c8129226a320a8d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClosedLeverDoor: {fileID: 0}
-  OpenLeverDoor: {fileID: 0}
-  LeverDoorClosed: {fileID: 0}
-  LeverDoorOpen: {fileID: 0}
   LevDoorClosed: {fileID: 1629718970}
   LevDoorOpen: {fileID: 1049868252}
   LeverOff: {fileID: 160502351}
